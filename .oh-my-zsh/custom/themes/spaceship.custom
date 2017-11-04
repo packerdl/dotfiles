@@ -7,6 +7,5 @@ RPROMPT="%{$fg[$SPACESHIP_TIME_COLOR]%}%*%{$reset_color%} $CLOCK_SYMBOL"
 # Force display of initial prompt prefix (dir)
 SPACESHIP_OPENED=true
 
-SPACESHIP_PROMPT_SYMBOL="────"
+SPACESHIP_PROMPT_SYMBOL=">"
 SPACESHIP_DIR_PREFIX="%{$fg[$SPACESHIP_DIR_COLOR]%}  %{$reset_color%}"
-
