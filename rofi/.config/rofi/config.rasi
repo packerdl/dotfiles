@@ -1,0 +1,9 @@
+configuration {
+  modi: "combi,window,ssh";
+  combi-modi: "window,drun,ssh";
+  show-icons: true;
+  sidebar-mode: true;
+}
+
+// Use pywal theme as base theme
+@theme "../../.cache/wal/colors-rofi-dark-alpha.rasi"
