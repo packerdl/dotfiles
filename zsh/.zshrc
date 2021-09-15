@@ -93,7 +93,7 @@ fi
 [ -s "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh" --no-use
 
 # Source VTE if using Tilix as terminal emulator
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+if [ $TILIX_ID ] && [ -s "/etc/profile.d/vte.sh" ]; then
   source /etc/profile.d/vte.sh
 fi
 
