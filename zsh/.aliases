@@ -16,10 +16,6 @@ alias now='date +"%F %T %Z"'
 
 alias dps='docker ps'
 
-alias dca='docker-compose down && docker-compose build && docker-compose up'
-alias dcr='docker-compose run --rm'
-alias dcs='docker-compose stop'
-
 alias dotfile='stow -vt ~'
 
 alias space='df -h'
