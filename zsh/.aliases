@@ -56,6 +56,9 @@ alias wgup='sudo wg-quick up wg0'
 
 alias open='xdg-open &>/dev/null'
 
+alias cpuspeed='watch -n 1 "grep \"^[c]pu MHz\" /proc/cpuinfo"'
+alias thermals="watch -n 1 -x bash -c \"paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t | sed 's/\(.\)..$/.\1°C/'\""
+
 # Use colorls if available
 if type colorls > /dev/null; then
   alias lc='colorls --sd'
