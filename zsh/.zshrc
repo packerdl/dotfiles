@@ -92,6 +92,13 @@ fi
 # https://github.com/nvm-sh/nvm
 [ -s "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh" --no-use
 
+# Python virutalenv wrapper
+if type virtualenvwrapper.sh > /dev/null; then
+  export WORKON_HOME="$HOME/.virtualenvs"
+  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+  source "$HOME/.local/bin/virtualenvwrapper.sh"
+fi
+
 # Source VTE if using Tilix as terminal emulator
 if [ $TILIX_ID ] && [ -s "/etc/profile.d/vte.sh" ]; then
   source /etc/profile.d/vte.sh
