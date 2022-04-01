@@ -73,6 +73,7 @@ path+=(
   "${HOME}/.cargo/bin"
   "${HOME}/.local/bin"
   "${HOME}/.rbenv/bin"
+  "${HOME}/.pyenv/bin"
   "${HOME}/scripts"
 )
 
@@ -86,6 +87,12 @@ fi
 # https://github.com/rbenv/rbenv
 if type rbenv > /dev/null; then
   eval "$(rbenv init -)"
+fi
+
+# Python version management
+# https://github.com/pyenv/pyenv
+if type pyenv > /dev/null; then
+  eval "$(pyenv init -)"
 fi
 
 # Node version manager
