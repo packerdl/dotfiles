@@ -1,0 +1,15 @@
+import = ["~/.config/alacritty/dracula.toml"]
+
+[cursor.style]
+blinking = "On"
+
+[font.normal]
+family = "CaskaydiaCove Nerd Font Mono"
+
+[window]
+blur = true
+opacity = 0.75
+
+[window.padding]
+x = 16
+y = 16
