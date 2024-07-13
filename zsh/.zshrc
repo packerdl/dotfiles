@@ -77,6 +77,12 @@ path+=(
   "${HOME}/scripts"
 )
 
+fpath+=(
+  # Additional completion definitions
+  # https://github.com/zsh-users/zsh-completions
+  "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src"
+)
+
 # Starship prompt
 # https://github.com/starship/starship
 if type starship > /dev/null; then
