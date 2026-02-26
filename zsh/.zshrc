@@ -66,4 +66,4 @@ export GPG_TTY=$(tty)
 
 # Load command-line fuzzy finder if present
 # https://github.com/junegunn/fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+type fzf > /dev/null && source <(fzf --zsh)
