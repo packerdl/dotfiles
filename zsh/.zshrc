@@ -56,9 +56,7 @@ plugins=(
   docker
   docker-compose
   git
-  python
   rsync
-  themes
   you-should-use
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -73,7 +71,6 @@ path+=(
   "${HOME}/.cargo/bin"
   "${HOME}/.local/bin"
   "${HOME}/.rbenv/bin"
-  "${HOME}/.pyenv/bin"
   "${HOME}/scripts"
 )
 
@@ -95,40 +92,17 @@ if type rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
-# Python version management
-# https://github.com/pyenv/pyenv
-if type pyenv > /dev/null; then
-  eval "$(pyenv init -)"
-fi
-
 # Node version manager
 # https://github.com/nvm-sh/nvm
 [ -s "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh" --no-use
 
-# Python virutalenv wrapper
-if type virtualenvwrapper.sh > /dev/null; then
-  export WORKON_HOME="$HOME/.virtualenvs"
-  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-  source "$HOME/.local/bin/virtualenvwrapper.sh"
-fi
-
 # Bitwarden SSH Agent support
 [ -S "$HOME/.bitwarden-ssh-agent.sock" ] && export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
-
-# Source VTE if using Tilix as terminal emulator
-if [ $TILIX_ID ] && [ -s "/etc/profile.d/vte.sh" ]; then
-  source /etc/profile.d/vte.sh
-fi
 
 [ -f ~/.aliases ] && source ~/.aliases
 
 if [ -f ~/.env ]; then
   source ~/.env
-fi
-
-# Import colorscheme from wal
-if type wal > /dev/null && [ -s $HOME/.cache/wal/sequences ]; then
-  (cat "$HOME/.cache/wal/sequences" &)
 fi
 
 # Ensure GPG_TTY is properly set for gpg-agent's Pinentry program
