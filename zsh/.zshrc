@@ -112,6 +112,9 @@ if type virtualenvwrapper.sh > /dev/null; then
   source "$HOME/.local/bin/virtualenvwrapper.sh"
 fi
 
+# Bitwarden SSH Agent support
+[ -S "$HOME/.bitwarden-ssh-agent.sock" ] && export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+
 # Source VTE if using Tilix as terminal emulator
 if [ $TILIX_ID ] && [ -s "/etc/profile.d/vte.sh" ]; then
   source /etc/profile.d/vte.sh
