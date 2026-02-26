@@ -1,0 +1,5 @@
+# Git aliases
+
+alias gdst='git diff --stat'
+alias git='noglob git'
+alias gpp='git pull --prune'

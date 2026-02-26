@@ -117,9 +117,7 @@ if [ $TILIX_ID ] && [ -s "/etc/profile.d/vte.sh" ]; then
   source /etc/profile.d/vte.sh
 fi
 
-if [ -f ~/.aliases ]; then
-  source ~/.aliases
-fi
+[ -f ~/.aliases ] && source ~/.aliases
 
 if [ -f ~/.env ]; then
   source ~/.env

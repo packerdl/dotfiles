@@ -1,2 +1,5 @@
 # Do not include customized lock screen icon
 i3/**/i3lock/lock.png
+
+# Machine-local alias files
+zsh/.aliases.d/*.local

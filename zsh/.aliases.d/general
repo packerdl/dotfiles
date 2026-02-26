@@ -1,0 +1,15 @@
+# General-purpose aliases — work on any platform
+
+alias c='clear'
+alias now='date +"%F %T %Z"'
+alias path='echo -e ${PATH//:/\\n}'
+alias hgrep='history | grep'
+alias sizeof='du -chs'
+alias space='df -h'
+alias cmount='mount | column -t'
+alias emptydirs='find . -type d -empty'
+alias findfile='find . -type f -name'
+alias meminfo='free -hlt'
+alias reboot='shutdown -r'
+alias dotfile='stow -vt ~'
+alias tldr='tldr -t base16'

@@ -1,0 +1,28 @@
+# Linux-desktop-specific aliases
+
+# apt package management
+alias autoremove='sudo apt autoremove'
+alias update='sudo apt update'
+alias upgradable='apt list --upgradable'
+alias upgrade='sudo apt upgrade'
+
+alias gimme='sudo chown -R $USER:$USER'
+alias nautilus='nautilus --no-desktop'
+alias open='xdg-open &>/dev/null'
+
+alias cpuspeed='watch -n 1 "grep \"^[c]pu MHz\" /proc/cpuinfo"'
+alias thermals="watch -n 1 -x bash -c \"paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t | sed 's/\(.\)..$/.\1°C/'\""
+
+# pywal
+alias walf='wal --vte -f'
+alias wallf='wal --vte -l -f'
+alias wali='wal --backend colorz --vte -o wal-update -i'
+
+# Use colorls if available
+if type colorls > /dev/null; then
+  alias lc='colorls --sd'
+  alias lca='colorls -lA --sd'
+fi
+
+# Dropbox
+alias dst='dropbox status'

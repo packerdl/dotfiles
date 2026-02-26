@@ -1,0 +1,8 @@
+# Network & VPN aliases
+
+alias myip='curl https://api.ipify.org; echo'
+alias ports='netstat -tulanp'
+
+# WireGuard
+alias wgdn='sudo wg-quick down wg0'
+alias wgup='sudo wg-quick up wg0'
