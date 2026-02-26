@@ -21,6 +21,15 @@ plugins=(
 # Lazy-load nvm on first use for faster startup
 zstyle ':omz:plugins:nvm' lazy yes
 
+# Skip the update check run on every new shell
+DISABLE_AUTO_UPDATE="true"
+
+# Skip $fpath permission checks before compinit runs. These checks guard
+# against another user on a shared system injecting malicious autoloaded
+# functions, a threat that doesn't apply on a single-user machine where
+# only you can write to $fpath.
+DISABLE_COMPFIX="true"
+
 source $ZSH/oh-my-zsh.sh
 
 # Only allow unique entries in the PATH variable.
