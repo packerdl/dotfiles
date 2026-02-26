@@ -11,11 +11,15 @@ plugins=(
   docker
   docker-compose
   git
+  nvm
   rsync
   you-should-use
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
+
+# Lazy-load nvm on first use for faster startup
+zstyle ':omz:plugins:nvm' lazy yes
 
 source $ZSH/oh-my-zsh.sh
 
@@ -46,10 +50,6 @@ fi
 if type rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
-
-# Node version manager
-# https://github.com/nvm-sh/nvm
-[ -s "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh" --no-use
 
 # Bitwarden SSH Agent support
 [ -S "$HOME/.bitwarden-ssh-agent.sock" ] && export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
