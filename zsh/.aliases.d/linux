@@ -8,7 +8,7 @@ alias upgrade='sudo apt upgrade'
 
 alias gimme='sudo chown -R $USER:$USER'
 alias nautilus='nautilus --no-desktop'
-alias open='xdg-open &>/dev/null'
+# `open` is defined as a platform-agnostic function in ~/.aliases.d/general
 
 alias cpuspeed='watch -n 1 "grep \"^[c]pu MHz\" /proc/cpuinfo"'
 alias thermals="watch -n 1 -x bash -c \"paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t | sed 's/\(.\)..$/.\1°C/'\""

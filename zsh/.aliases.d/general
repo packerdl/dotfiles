@@ -13,3 +13,18 @@ alias meminfo='free -hlt'
 alias reboot='shutdown -r'
 alias dotfile='stow -vt ~'
 alias tldr='tldr -t base16'
+
+# Open files/URLs with the OS default handler.
+# macOS ships its own `open`; elsewhere fall back to xdg-open (silenced/detached).
+open() {
+  case "$OSTYPE" in
+    darwin*) command open "$@" ;;
+    *)
+      if command -v xdg-open >/dev/null 2>&1; then
+        xdg-open "$@" >/dev/null 2>&1
+      else
+        command open "$@"
+      fi
+      ;;
+  esac
+}
