@@ -1,9 +1,0 @@
-[module/xwindow]
-type = internal/xwindow
-
-format-padding = 0
-format-prefix = " "
-format-prefix-font = 2
-
-label = %title%
-label-maxlen = 25

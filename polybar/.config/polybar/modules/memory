@@ -1,8 +1,0 @@
-[module/memory]
-type = internal/memory
-interval = 3
-
-format = <label>
-format-prefix = "MEM: "
-
-label = %gb_used%
