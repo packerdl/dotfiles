@@ -1,4 +1,0 @@
-#! /usr/bin/env bash
-
-# Install docker using script hosted by the Docker team
-curl -sSL https://get.docker.com | sh

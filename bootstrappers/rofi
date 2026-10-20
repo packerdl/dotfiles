@@ -1,5 +1,0 @@
-#! /usr/bin/env sh
-
-dl_link="https://launchpad.net/ubuntu/+archive/primary/+files/rofi_1.3.1-2_amd64.deb"
-wget -c -O rofi.deb $dl_link
-sudo dpkg -i rofi.deb && rm rofi.deb
