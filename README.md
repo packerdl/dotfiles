@@ -41,7 +41,7 @@ cd dotfiles
 # Uninstalling a package.
 # You may omit the target folder argument if you've cloned
 # the repository to your home directory (~/dotfiles).
-stow -d <package-name> -t ~
+stow -D <package-name> -t ~
 ```
 
 #### Dry-Run Operations
