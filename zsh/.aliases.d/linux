@@ -17,7 +17,7 @@ alias thermals="watch -n 1 -x bash -c \"paste <(cat /sys/class/thermal/thermal_z
 # pywal
 alias walf='wal --vte -f'
 alias wallf='wal --vte -l -f'
-alias wali='wal --backend colorz --vte -o wal-update -i'
+alias wali='wal --backend colorz --vte -i'
 
 # Use colorls if available
 if type colorls > /dev/null; then
