@@ -3,6 +3,7 @@ configuration {
   combi-modi: "window,drun,ssh";
   show-icons: true;
   sidebar-mode: true;
+  font: "FantasqueSansMono Nerd Font 14";
 }
 
 // Use pywal theme as base theme
